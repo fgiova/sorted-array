@@ -1,0 +1,56 @@
+{
+  "name": "@fgiova/sorted-array",
+  "description": "permanent sorted array",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "benchmark": "npm rebuild && node benchmark/index.js",
+    "lint": "eslint 'src/**/*.ts'",
+    "test": "tap",
+    "test:debug": "tap -T -O"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fgiova/sorted-array.git"
+  },
+  "author": "Francesco Giovannini <fgiova@fgiova.com>",
+  "license": "MIT",
+  "keywords": [
+    "array",
+    "sort",
+    "binary search"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "tap": {
+    "node-arg": "--require=ts-node/register",
+    "ts": true,
+    "lines": 100,
+    "branches": 100,
+    "statements": 100,
+    "functions": 100
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^18.17.1",
+    "@types/tap": "^15.0.8",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "benchmark": "^2.1.4",
+    "conventional-changelog-conventionalcommits": "^6.1.0",
+    "eslint": "^8.47.0",
+    "eslint-plugin-import": "^2.28.1",
+    "microtime": "^3.1.1",
+    "semantic-release": "^21.0.9",
+    "tap": "^16.3.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
