@@ -2,6 +2,8 @@
 [![NPM version](https://img.shields.io/npm/v/@fgiova/sorted-array.svg?style=flat)](https://www.npmjs.com/package/@fgiova/sorted-array)
 ![CI workflow](https://github.com/fgiova/sorted-array/actions/workflows/node.js.yml/badge.svg)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5b2a24734bd77a4c8f39/maintainability)](https://codeclimate.com/github/fgiova/sorted-array/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/5b2a24734bd77a4c8f39/test_coverage)](https://codeclimate.com/github/fgiova/sorted-array/test_coverage)
 
 ## Description
 This simple module provides an array implementation, with a sorting feature using binary search algorithm.

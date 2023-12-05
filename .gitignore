@@ -98,3 +98,4 @@ coverage
 dist/
 .nyc_output/
 !/.env.dev
+/.tap/

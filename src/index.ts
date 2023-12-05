@@ -1,12 +1,13 @@
 export class SortedArray<T> extends Array<T> {
 
 	//default sort function
-	/* istanbul ignore next */
+	/* c8 ignore start */
 	readonly #comparatorFunction: (a: T, b: T) => number = (a, b) => {
 		if (a < b) return -1;
 		if (a >= b) return 1;
 		return 0;
 	}
+	/* c8 ignore end */
 
 	public constructor();
 	public constructor(items: T[]);
@@ -36,7 +37,7 @@ export class SortedArray<T> extends Array<T> {
 
 	private divideEtImpera(edge1: number, edge2: number, positions: Record<number, boolean>): number {
 		let position = edge1 + Math.floor((edge2 - edge1) / 2);
-		/* istanbul ignore next */
+		/* c8 ignore next 1 */
 		if (positions[position]) position = edge1 + Math.ceil((edge2 - edge1) / 2);
 		positions[position] = true;
 		return position;
@@ -83,20 +84,20 @@ export class SortedArray<T> extends Array<T> {
 
 	private findPosition(search: T) {
 		// if array is empty, return -1
-		/* istanbul ignore next */
+		/* c8 ignore next 1 */
 		if (this.length === 0) return -1;
 		// if array has only one element, return 0
 		if (this.length === 1) return 0;
 		// find the closest position
 		const closestPosition = this.binarySearch(search);
-		/* istanbul ignore next */
+		/* c8 ignore start */
 		if (closestPosition > this.length - 1) {
 			return this.length - 1;
 		}
-		/* istanbul ignore next */
 		else if (closestPosition < 0) {
 			return 0;
 		}
+		/* c8 ignore end */
 		return closestPosition;
 	}
 
@@ -105,7 +106,6 @@ export class SortedArray<T> extends Array<T> {
 		let position = this.findPosition(item);
 		// find the final position in case of equal values
 		const finalSort = this.#comparatorFunction(this[position], item);
-		/* istanbul ignore else */
 		if (finalSort < 0) {
 			super.splice(++position, 0, item);
 		}
